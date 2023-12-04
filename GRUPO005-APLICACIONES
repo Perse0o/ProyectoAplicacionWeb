@@ -10,28 +10,28 @@ Apellido_materno varchar(30),
 Nombres varchar(30),
 Sexo char(1) check(Sexo in ('F','M')),
 Estado_civil varchar(20) check(Estado_civil in ('Casado','Soltero','Viudo','Divorciado')),
-Direcci髇 varchar(50),
+Direcci贸n varchar(50),
 Ubigeo varchar(6),
 Discapacidad char(2) check(Discapacidad in ('SI','NO')),
-Descripci髇_Discapacidad varchar(20),
-Tel閒ono varchar(15),
+Descripci贸n_Discapacidad varchar(20),
+Tel茅fono varchar(15),
 Celular varchar(15),
-Correo_electr髇ico varchar(15),
-Contrase馻 varchar(10),
+Correo_electr贸nico varchar(15),
+Contrase帽a varchar(10),
 Foto varbinary(max),
 Fecha_de_registro date,
-Fecha_de_modificaci髇 date,
+Fecha_de_modificaci贸n date,
 id_DatosAcademicos int,
 id_Experiencias int,
 id_ubigeo int
 );
 
-alter table Datos_Personales add constraint fk_id_DatosAcademicos FOREIGN KEY (id_DatosAcademicos) REFERENCES Datos_acad閙icos (id_DatosAcademicos)
+alter table Datos_Personales add constraint fk_id_DatosAcademicos FOREIGN KEY (id_DatosAcademicos) REFERENCES Datos_acad茅micos (id_DatosAcademicos)
 alter table Datos_Personales add constraint fk_id_Experiencias FOREIGN KEY (id_Experiencias) REFERENCES Experiencias (id_Experiencias)
 alter table Datos_Personales add constraint fk_id_ubigeo FOREIGN KEY (id_ubigeo) REFERENCES Ubigeo (id_ubigeo)
 
 
-create table Datos_acad閙icos (
+create table Datos_acad茅micos (
 id_DatosAcademicos int primary key identity,
 Titulo_Grado varchar(20),
 Centro_Estudios varchar(20),
